@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="{CHARSET}">
+		<title></title>
+	</head>
+	<style type="text/css">
+		body{
+			margin: 0;
+			padding: 0;
+		}
+		img{
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+		#banner{
+			position: relative;
+			top: 10px;
+		}
+		#canvas{
+			position: relative;
+			top: 0;
+			left: 50%;
+			transform: translateX(-55%);
+			border: 1px solid black;
+		}
+	</style>
+	<body>
+		<div id="banner">
+			<img src="./banner.jpg"/>
+			<canvas id="canvas"></canvas>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var canvas = document.getElementById('canvas')
+		var ctx = canvas.getContext('2d')
+		var cx = canvas.width = 700
+		var cy = canvas.height = 550
+		var round = []
+		var initRoundPopulation = 5
+		
+		var canvas2 = document.createElement('canvas')
+		var ctx2 = canvas2.getContext('2d')
+		canvas2.width = cx
+		canvas2.height = cy
+		
+		var mapline = [	[125,170],
+						[125,140],
+						[220,85],
+						[247,125],
+						[305,180],
+						[380,205],
+						[450,180],
+						[495,125],
+						[543,22],
+						[663,72],
+						[663,125],
+						[585,205],
+						[585,480],
+						[450,480],
+						[450,545],
+						[390,540],
+						[390,480],
+						[305,480],
+						[290,400],
+						[220,400],
+						[140,370],
+						[80,315],
+						[50,180]
+					]
+		
+		ctx2.beginPath()
+		ctx2.moveTo(50,180)
+		for(var i=0;i<mapline.length;i++){
+			for(var j=0;j<mapline[i].length;j++){
+				ctx2.lineTo(mapline[i][0],mapline[i][1])
+			}
+			
+		}
+		ctx2.closePath()
+		ctx2.strokeStyle = 'red'
+		ctx2.stroke()
+				
+		function Round_item(index,x,y){
+			this.index = index;
+			this.x = x
+			this.y = y
+			this.r = 25
+			this.color = 'rgba(255,255,255)'
+		}
+		
+		
+		Round_item.prototype.draw = function(){
+			ctx.fillStyle = this.color
+			ctx.beginPath()
+			if(ctx2.isPointInPath(this.x,this.y)){
+				ctx.arc(this.x,this.y,this.r,0,Math.PI*2)
+			}
+			ctx.closePath()
+			ctx.fill()
+		}
+
+		
+		function init(){
+			for(var i=0;i<initRoundPopulation;i++){
+				round[i] = new Round_item(i,Math.random()*cx,Math.random()*cy)
+				round[i].draw()
+			}
+			ctx.drawImage(canvas2,0,0,cx,cy)
+		}
+		init()
+	</script>
+</html>

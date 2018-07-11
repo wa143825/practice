@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="{CHARSET}">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#canvas{
+			border: 1px solid black;
+			background: black;
+		}
+	</style>
+	<body>
+		<canvas id="canvas"></canvas>
+	</body>
+	<script type="text/javascript">
+		var canvas = document.getElementById('canvas')
+		var ctx = canvas.getContext('2d')
+		var cx = canvas.width = 500
+		var cy = canvas.height = 500
+		var round = []
+		
+		var para = {
+			num:100,
+			color:false,
+			r:0.9,
+			o:0.09,
+			a:1
+		},
+		color,
+		color2;
+		
+		window.onmousemove = function(e){
+			mouseX = event.clientX
+			mouseY = event.clientY
+			
+			round.push({
+				mouseX:mouseX,
+				mouseY:mouseY,
+				r:para.r,
+				o:1
+			})
+		}
+		
+		if(para.color){
+			color2 = para.color
+		}else{
+			color = Math.random() * 360
+		}
+		
+		
+		function animate(){
+			if(!para.color){
+				color += .1;
+				color2 = `hsl(${color},100%,80%)`
+			}
+			
+			ctx.clearRect(0,0,cx,cy)
+			
+			for(var i = 0; i<round.length;i++){
+				ctx.fillStyle = color2
+				ctx.beginPath()
+				ctx.arc(round[i].mouseX,round[i].mouseY,round[i].r,0,Math.PI*2)
+				ctx.closePath()
+				ctx.fill()
+				round[i].r += para.r
+				round[i].o -= para.o
+				
+				if(round[i].o<=0){
+					round.splice(i,1);
+					i--
+				}
+			}
+			window.requestAnimationFrame(animate)
+		}
+		
+		animate()
+	</script>
+</html>
