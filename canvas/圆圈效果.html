@@ -25,25 +25,24 @@
 			transform: translateX(-55%);
 		}
 	</style>
-	<body>
-		<div id="banner">
-			<img src="./banner.jpg"/>
-			<canvas id="canvas"></canvas>
-		</div>
-		
-	</body>
+    <body>
+        <div id="banner">
+            <img src="./banner.jpg"/>
+            <canvas id="canvas"></canvas>
+        </div>
+    </body>
 	<script type="text/javascript">
-		var canvas = document.getElementById('canvas')
+		var canvas = document.getElementById('canvas')//实现动画效果
 		var ctx = canvas.getContext('2d')
 		var cx = canvas.width = 700
 		var cy = canvas.height = 550
 		var round = []
 		var initRoundPopulation = 18
-		
-		var canvas2 = document.createElement('canvas')
+
+		var canvas2 = document.createElement('canvas')//记录中国地图的边界
 		var ctx2 = canvas2.getContext('2d')
 		canvas2.width = cx
-		canvas2.height = cy	
+		canvas2.height = cy
 		//中国地图的边际线
 		var mapline = [	[125,170],
 						[125,140],
@@ -69,79 +68,76 @@
 						[80,315],
 						[50,180]
 					]
-	
+
 		ctx2.beginPath()
 		ctx2.moveTo(50,180)
 		for(var i=0;i<mapline.length;i++){
 			for(var j=0;j<mapline[i].length;j++){
 				ctx2.lineTo(mapline[i][0],mapline[i][1])
 			}
-			
+
 		}
 		ctx2.closePath()
 		ctx2.fillStyle = 'red'
-		ctx2.fill()		
+		ctx2.fill()
 		
-		
-		
-		
-		
-		function Round_item(index,x,y){
-			this.index = index;
-			this.x = x
-			this.y = y
-			this.r = Math.random() * 50 + 1
-			this.maxR = Math.floor(Math.random()*50)+30
-			this.color = 'white'
-			this.globalAlpha = 1
-		}
-		
-		Round_item.prototype.draw = function(){
-			ctx.strokeStyle = this.color
-			ctx.globalAlpha = this.globalAlpha
-			ctx.shadowBlur = this.r * 2
-			ctx.beginPath()
-			if(ctx2.isPointInPath(this.x,this.y)){
-				ctx.arc(this.x,this.y,this.r,0,Math.PI*2)
-			}
-			ctx.closePath()
-			ctx.stroke()
-		}
 
-		Round_item.prototype.move = function(){
-			this.r += 0.15
-			var tAlpha = (this.r / this.maxR)
-			if(tAlpha> 0.8){
-				this.globalAlpha -= 0.1
-				if(this.globalAlpha<0.1){
-					this.globalAlpha = 0
-				}
-			}
-			if(this.r > this.maxR){
-				this.r = 10
-				this.x = Math.random()*cx
-				this.y = Math.random()*cy
-				this.globalAlpha = 1
-			}
-			this.draw()
-		}
-		
-		function animate(){
-			ctx.clearRect(0,0,cx,cy)
-			
-			for(var i in round){
-				round[i].move()
-			}
-			requestAnimationFrame(animate)
-		}
-		
-		function init(){
-			for(var i=0;i<initRoundPopulation;i++){
-				round[i] = new Round_item(i,Math.random()*cx,Math.random()*cy)
-				round[i].draw()
-			}
-			animate()
-		}
-		init()
+        function Round_item(index,x,y){ //设置圆环对象的属性
+            this.index = index;
+            this.x = x
+            this.y = y
+            this.r = Math.random() * 50 + 1
+            this.maxR = Math.floor(Math.random()*50)+30
+            this.color = 'white'
+            this.globalAlpha = 1
+        }
+
+        Round_item.prototype.draw = function(){ //绘制圆环
+            ctx.strokeStyle = this.color
+            ctx.globalAlpha = this.globalAlpha
+            ctx.shadowBlur = this.r * 2
+            ctx.beginPath()
+	        //注意这里时ctx2
+            if(ctx2.isPointInPath(this.x,this.y)){//判断中心点是否在中国地图中
+                ctx.arc(this.x,this.y,this.r,0,Math.PI*2)
+            }
+            ctx.closePath()
+            ctx.stroke()
+        }
+
+        Round_item.prototype.move = function(){//做动画效果
+            this.r += 0.15 //圆的半径递增
+            var tAlpha = (this.r / this.maxR) //（当前圆的半径）/ （圆半径的最大值）    算出动画完成的百分比
+            if(tAlpha> 0.8){  //当完成80%时
+                this.globalAlpha -= 0.1 //圆的透明版递减
+                if(this.globalAlpha<0.1){ //透明版不能负数
+                    this.globalAlpha = 0
+                }
+            }
+            if(this.r > this.maxR){ //当圆到达最大比例时
+                this.r = 10//将这个圆返回为最小
+                this.x = Math.random()*cx//再随机一个坐标
+                this.y = Math.random()*cy
+                this.globalAlpha = 1//把透明的变为1
+            }
+            this.draw()//再进行绘制
+        }
+
+        function animate(){
+            ctx.clearRect(0,0,cx,cy)
+            for(var i in round){
+                round[i].move()
+            }
+            requestAnimationFrame(animate)//一个新的api，详细查看mdn
+        }
+
+        function init(){//初始化
+            for(var i=0;i<initRoundPopulation;i++){
+                round[i] = new Round_item(i,Math.random()*cx,Math.random()*cy)
+                round[i].draw()
+            }
+            animate()
+        }
+        init()
 	</script>
 </html>
