@@ -1,0 +1,360 @@
+@media screen and (min-width: 1600px) {
+    .middle_body{
+        width: 100rem;
+        height: 100%;
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width: 1600px) {
+    html{
+        font-size: 14px;
+    }
+    .middle_body{
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        padding: 0 50px;
+    }
+}
+.menu .on{
+    background: #0e954e;
+    display: block;
+}
+
+.menu .on .bgicon{
+    color: #2aab6c;
+}
+
+.menu .onicon{
+    background: white;
+    color: #0e954e;
+}
+
+.header{
+    height: 30%;
+    width: 100%;
+    background: url('../img/index_bg_head.jpg');
+    position: relative;
+}
+
+.weather{
+    height: 80px;
+    color: #10aa61;
+    font-family: "微软雅黑";
+    margin-left: 150px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+}
+
+.signin{
+    float: left;
+    margin-left: 150px;
+    position: absolute;
+    top: 20%;
+    transform: translateY(-50%);
+}
+
+.signin button{
+    width: 133px;
+    height: 24px;
+    line-height: 24px;
+    background: #FF5B53;
+    border: 0;
+    border-radius: 8px;
+    color: white;
+}
+
+.weather img{
+    height: 50px;
+}
+
+.weat{
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+    border-right: 1px solid #10aa61;
+    margin-right: 15px;
+    padding-right: 15px; 
+    text-align: center
+}
+
+.weat_left,.weat_right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.weat_right{
+    font-size: 14px;
+}
+
+.celsius{
+    font-size: 32px;
+}
+
+.air{
+    background: #10aa61;
+    color: white;
+    height: 20px;
+    line-height: 20px;
+}
+
+.date{
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.date_date{
+    font-size: 32px;
+}
+
+.middle{
+    height: 50%;
+    width: 100%;
+    min-width: 1440px;
+    background: #10aa61;
+}
+
+
+
+.company_name{
+    position: relative;
+    float: right;
+}
+
+.company_name img{
+    position: relative;
+    top: -220px;
+}
+
+.menu{
+    height: 100%;
+    float: left;
+}
+
+.menu .on{
+    width: 30rem;
+    background: #0e954e;
+    display: block;
+}
+
+.menu li{
+    height: 100%;
+    width: 7.5rem;
+    float: left;
+    border-right: 1px dotted white;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.menu li .menu_left{
+    height: 100%;
+    width: 7.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.menu .bgicon{
+    position: absolute;
+    font-size: 6.25rem;
+    bottom: -50px;
+    right: -20px;
+    color: #2ab070;
+}
+
+.menu .menu_left{
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.menu .icon{
+    height: 5rem;
+    width: 5rem;
+    border: 1px dotted white;
+    border-radius: 1.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu .icon i{
+    font-size: 3rem;
+    margin-top: 20px;
+}
+
+.menu .title{
+    margin-top: 30px;
+    width: 5rem;
+    writing-mode: vertical-lr;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.menu .title a{
+    color: white;
+}
+
+.menu .title_ch{
+    letter-spacing: 2px;
+    font-size: 2.25rem;
+    font-family: '黑体';
+    font-weight: bolder;
+}
+
+.menu .title_en{
+    font-size: 1.25rem;
+    font-family: "宋体";
+    font-weight: bolder;
+}
+
+.footer{
+    height: 20%;
+    width: 100%;
+    position: relative;
+    background: url('../img/index_bottom.jpg')
+}
+
+.qrcode{
+    height: 75px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 130px;
+    display: flex;
+    color: #10aa61;
+    align-items: center
+}
+
+.qrcode i{
+    font-size: 35px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.qrcode img{
+    height: 75px;
+    width: auto;
+    margin-right: 10px;
+}
+
+.call{
+    font-family: "宋体";
+    font-weight: bolder;
+    font-size: 32px;
+    margin-left: 10px;
+}
+
+.copyright{
+    height: 90px;
+    display: flex;
+    position: absolute;
+    right: 130px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9cad9e;
+}
+
+.copy_icon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-right: 1px dotted burlywood;
+    margin-right: 10px;
+    padding-right: 10px;
+}
+
+.copy_text{
+    line-height: 20px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.dateil{
+    width: 22.5rem;
+    height: 100%;
+    float: left;
+    background: #c5f9e6;
+    padding: 15px;
+    position: absolute;
+    left: 7.5rem;
+    top: 0;
+}
+
+.dateil .dateil_title{
+    font-family: "微软雅黑";
+    color: #10aa61;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    border-left: 8px solid #10aa61;
+    padding-left: 10px;
+}
+
+.dateil .dateil_img{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center
+}
+
+.dateil .dateil_img img{
+    width: 100%;
+}
+
+.dateil ul{
+    position: relative;
+    margin-top: 20px;
+}
+
+.dateil ul .little_title{
+    position: absolute;
+    top: -10px;
+    height: 30px;
+    width: 65px;
+    background: #10aa61;
+    color: white;
+    line-height: 30px;
+    letter-spacing: 5px;
+    padding-left: 10px;
+    z-index: 99;
+}
+
+.dateil li{
+    border: none;
+    padding: 0;
+    position: relative;
+    width: 45%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.dateil li:nth-child(odd){
+    margin-left: 15px;
+}
+
+.dateil li p{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 14px;
+    color: #10aa61;
+    font-weight: bold;
+    height: 20px;
+    width: 145px;
+    line-height: 20px;
+    padding-left: 5px;
+    background: linear-gradient(to right, white , rgba(255,255,255,0))
+}
+
+
+

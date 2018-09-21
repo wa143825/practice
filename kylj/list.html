@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{dede:global.cfg_webname/}</title>
+    <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/reset.css">
+    <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/pages.css">
+    <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/list.css">
+    <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/font_icon/iconfont.css">
+</head>
+<body>
+    {dede:include filename="head.htm"/}
+    <article class="main center">
+        <div class="crumbs">
+            <h5>{dede:type}[field:typename/]{/dede:type}</h5>
+            <p>当前位置 | {dede:field name='position'/} </p>
+        </div>
+    
+        <ol class="news">
+            {dede:list}
+            <li><a href="[field:arcurl/]">[field:title/]</a><span>[field:pubdate function="MyDate('Y-m-d',@me)"/]</span></li>
+            {/dede:list}
+        </ol>
+        
+         <!-- 分页 -->
+        <!-- <ul class="button">
+            <li>10</li>
+            <li>&lt;</li>
+            <li class="change">1</li>
+            <li>2</li>
+            <li>&gt;</li>
+        </ul> -->
+        <div class="dede_pages"><ul class=pagelist>{dede:pagelist listitem="info,index,end,pre,next,pageno,option"listsize=""/}</ul></div>
+    </article>
+    {dede:include filename="footer.htm"/}
+</body>
+</html>

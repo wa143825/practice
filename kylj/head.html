@@ -1,0 +1,118 @@
+<header class="pheader">
+    <div class="center">
+        <div class="min_nav">
+            <a href="javascript:void(0)" onclick="SetHome(this,window.location)">设为首页</a>
+            <a href="javascript:void(0)" onclick="shoucang(document.title,window.location)">加入收藏</a>
+            <a href="{dede:global.cfg_indexurl/}">网站首页</a>
+        </div>
+    </div>
+    <nav class="nav">
+        <div class="center">
+            <div class="company_name">
+                <img src="{dede:global.cfg_templets_skin/}/img/company_logo.png" alt="">
+            </div>
+                <ul class="menu">
+                <li>
+                    <div class="icon">
+                        <i class="iconfont icon-yezi"></i>
+                    </div>
+                    <div class="title">
+                        <p class="title_ch">旅居养老</p>
+                        <p class="title_en">Living in pension</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="icon">
+                        <i class="iconfont icon-gouwuche"></i>
+                    </div>
+                    <div class="title">
+                        <p class="title_ch">养生商城</p>
+                        <p class="title_en">Products mall</p>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="icon">
+                        <i class="iconfont icon-renyuan"></i>
+                    </div>
+                    <div class="title">
+                        <p class="title_ch">养老服务</p>
+                        <p class="title_en">butler service</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="icon">
+                        <i class="iconfont icon-qizi-copy"></i>
+                    </div>
+                    <div class="title">
+                        <p class="title_ch">公益活动</p>
+                        <p class="title_en">Commonweal</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="icon"><i class="iconfont icon-qianbao"></i></div>
+                    <div class="title">
+                        <p class="title_ch">养老理财</p>
+                        <p class="title_en">Financial</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="icon"><i class="iconfont icon-shujia"></i></div>
+                    <div class="title">
+                        <p class="title_ch">媒体报道</p>
+                        <p class="title_en">Media repots</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="icon"><i class="iconfont icon-jiaoyi"></i></div>
+                    <div class="title">
+                        <p class="title_ch">招商合作</p>
+                        <p class="title_en">Coope ration</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<script>
+    // 设置为主页 
+function SetHome(obj,vrl){ 
+try{ 
+obj.style.behavior='url(#default#homepage)';obj.setHomePage(vrl); 
+} 
+catch(e){ 
+if(window.netscape) { 
+try { 
+netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect"); 
+} 
+catch (e) { 
+alert("此操作被浏览器拒绝！\n请在浏览器地址栏输入“about:config”并回车\n然后将 [signed.applets.codebase_principal_support]的值设置为'true',双击即可。"); 
+} 
+var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces.nsIPrefBranch); 
+prefs.setCharPref('browser.startup.homepage',vrl); 
+}else{ 
+alert("您的浏览器不支持，请按照下面步骤操作：1.打开浏览器设置。2.点击设置网页。3.输入："+vrl+"点击确定。"); 
+} 
+} 
+} 
+// 加入收藏 兼容360和IE6 
+function shoucang(sTitle,sURL) 
+{ 
+try 
+{ 
+window.external.addFavorite(sURL, sTitle); 
+} 
+catch (e) 
+{ 
+try 
+{ 
+window.sidebar.addPanel(sTitle, sURL, ""); 
+} 
+catch (e) 
+{ 
+alert("加入收藏失败，请使用Ctrl+D进行添加"); 
+} 
+} 
+} 
+
+</script>

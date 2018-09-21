@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{dede:global.cfg_webname/}</title>
+    <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/reset.css">
+    <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/pages.css">
+    <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/list.css">
+    <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/font_icon/iconfont.css">
+</head>
+<body>
+    {dede:include filename="head.htm"/}
+    <article class="main center">
+        <div class="crumbs">
+            <h5>{dede:type}[field:typename/]{/dede:type}</h5>
+            <p>当前位置 | {dede:field name='position'/} </p>
+        </div>
+        <div class="caption">
+            <h4>{dede:field.title/}</h4>
+            <span></span>
+            <p>时间：{dede:field.pubdate function="MyDate('Y-m-d H:i',@me)"/}&nbsp;&nbsp; 作者：{dede:field.writer/}&nbsp;&nbsp; 来源：{dede:field.source/}</p>
+        </div>
+        <div class="content-text">
+                {dede:field.body/}
+        </div>
+    </article>
+    {dede:include filename="footer.htm"/}
+</body>
+</html>

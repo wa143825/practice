@@ -1,0 +1,224 @@
+body{
+	background: #f4fdf9;
+}
+
+.pheader{
+    height: 370px;
+    width: 100%;
+    background: url('../img/index_bg_head.jpg');
+    position: relative;
+}
+
+.min_nav {
+    position: absolute;
+    top: 130px;
+    left: 1400px;
+}
+
+.min_nav a{
+    color: #999;
+    border-right: 1px solid #999;
+    padding-right: 5px;
+}
+
+.min_nav a:last-child{
+    border-right: none;
+}
+
+.nav{
+    height: 210px;
+    background: #10aa61;
+    position: relative;
+    top: 160px;
+}
+
+.nav .company_name{
+    float: left;
+    position: relative;
+    bottom: 160px;
+}
+
+.nav .company_name img{
+    width: 150px;
+}
+
+.menu{
+    float: right;
+    height: 100%;
+}
+
+.menu li{
+    height: 210px;
+    width: 150px;
+    padding-top: 30px;
+    float: left;
+    border-right: 1px dotted white;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.menu .icon{
+    height: 50px;
+    width: 50px;
+    border: 1px dotted white;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu .icon i{
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+.menu .title{
+    margin-top: 10px;
+    width: 50px;
+    writing-mode: vertical-lr;
+    display: flex;
+    flex-direction: column ;
+    justify-content: space-between;
+}
+
+.menu .title_ch{
+    letter-spacing: 2px;
+    font-size: 22px;
+    font-family: '黑体';
+    font-weight: bolder;
+}
+
+.menu .title_en{
+    font-size: 14px;
+    float: right;
+    font-family: "微软雅黑";
+    font-weight: bold;
+}
+
+.main{
+    min-height: 350px;
+    margin-bottom: 30px;
+    position: relative;
+}
+/* 面包屑 */
+.crumbs{
+	height: 50px;
+	border-bottom: 1px dotted #dddddd;
+	position: relative;
+	margin-bottom: 50px;
+}
+.crumbs h5{
+	width: 184px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	color: #eef8f4;
+	font-size: 26px;
+	background: #0e954e;
+	position: absolute;
+	left: 0;
+	bottom: -25px;
+}
+.crumbs p{
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 28px;	
+}
+
+.crumbs a{
+    color: black;
+}
+
+/* 翻页 */
+.button{
+    text-align: center;
+    margin-top: 30px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+ }
+ .button li{
+     width: 50px;
+     height: 30px;
+     text-align: center;
+     line-height: 30px;
+     border: 1px solid #dddddd;
+     font-size: 14px;
+     border-radius: 6px;
+     float: left;
+     margin: 0 7px;
+     color: #b0b0b0;
+ }
+ .change{
+     background: #c22020;
+ }
+
+.pfooter1{
+    border-top: 1px solid #eeeeee;
+}
+
+.pfooter1 .footinfo{
+    height: 114px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pfooter1 .qrcode img{
+    width: 75px;
+}
+
+.pfooter1 .tell{
+    height: 75px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    color: #0e954e
+}
+
+.pfooter1 .tell i,pfooter1 .tell span{
+    float: left;
+}
+
+.pfooter1 .call{
+    font-family: "宋体";
+    font-weight: bolder;
+    font-size: 32px;
+    margin-left: 10px;
+}
+
+.pfooter1 i{
+    font-size: 35px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.pfooter2{
+    background: #10aa61;
+    height: 180px;
+    position: relative;
+    color: #fff;
+}
+
+.pfooter2 .copy_icon{
+    position: absolute;
+    left: 50%;
+    top: -25px;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.pfooter2 .copy_text{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    line-height: 20px;
+}
