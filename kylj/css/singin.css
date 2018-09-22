@@ -1,0 +1,99 @@
+@media screen and (min-width: 1600px) {
+    
+}
+@media screen and (max-width: 1600px) {
+    html{
+        font-size: 14px;
+    }
+}
+
+body{
+    background: #3bc382;
+}
+
+.header{
+    background: #0e3623;
+    height: 66px;
+    color: white;
+    line-height: 66px;
+}
+
+.header .left{
+    float: left;
+}
+
+.header .left a{
+    color: #3bc382;
+}
+
+.header .right{
+    float: right;
+}
+
+.header .right a{
+    color: white;
+}
+
+.header .right li{
+    float: left;
+    margin: 0 10px;
+}
+
+.middle{
+    margin: 20px 0;
+}
+
+.middle .left{
+    width: 800px;
+    height: 600px;
+    position: relative;
+}
+
+.middle .left .logo{
+    position: absolute;
+}
+
+.middle .left .slogen{
+    width: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.middle .right{
+    float: right;
+    transform: translateY(-50%);
+    
+}
+
+.middle .right .signin_head{
+    width: 400px;
+    display: inline-block;
+}
+
+.middle .right .signin{
+    width: 400px;
+    height: 500px;
+    background: #ff5b53;
+}
+
+
+.footer{
+    height: 280px;
+    width: 100%;
+    background: url('../img/cloud.png') center;
+    position: absolute;
+    bottom: 0;
+}
+
+.footer ul{
+    position: absolute;
+    bottom: 0;
+    height: 170px;
+    width: 1240px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #758a7f;
+}
