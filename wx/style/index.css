@@ -1,0 +1,153 @@
+.banner{
+    height: 30vh;
+    width: 100%;
+    background: #57FA76;
+}
+
+.buttom li{
+    width: 25vw;
+    text-align: center;
+}
+
+.mibtn{
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.mibtn a{
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.mibtn span{
+    display: inline-block;
+    height: 5.5vh;
+    width: 5.5vh;
+    background: #419156;
+    border-radius: 5.5vh;
+}
+
+.order{
+    height: 36vh;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px 1px rgba(0, 0, 0, .1);
+    margin: 2vh;
+}
+
+.order .title{
+    height: 6vh;
+    line-height: 6vh;
+    padding: 0 5vw;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+}
+
+.order .title span{
+    float: right;
+    color: #aaa;
+    font-weight: normal;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 30vh;
+  }
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.vipcard{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-bottom: 3vh;
+    font-size: .9rem;
+}
+
+
+
+.card_title span{
+    color: #C78F09;
+}
+
+.card_card{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card_card img{
+    width: 40%;
+    height: 40%;
+}
+
+.card_card ul li{
+    text-align: left;
+    list-style-type: disc;
+    line-height: 1.5rem;
+}
+
+.card_card ul li span{
+    font-size: 1rem;
+    color: #C78F09;
+}
+
+.card_button{
+    width: 90%;
+    height: 6vh;
+    background: #419156;
+    border-radius: .3rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.card_button span{
+    font-size: .3rem;
+}
+
+.gudie{
+    width: 100%;
+    height: 10vh;
+    position: absolute;
+    bottom: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-top: 1px solid #ddd;
+}
+
+.gudie .right{
+    text-align: center;
+}
+
+.gudie .right span{
+    color: #aaa;
+    font-size: .8rem;
+    line-height: 1.5rem;
+}
+

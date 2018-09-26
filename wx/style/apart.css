@@ -1,0 +1,200 @@
+.swiperTab{display:flex;width:100%;flex-direction:row;justify-content:center;align-items:center}
+.swiperTab li{color:#fff;display:flex;height:48px;border-left:1px solid #7f8288;background-color:#7f8288;cursor:pointer;flex:1;flex-direction:row;justify-content:center;align-items:center}
+.swiperTab li:first-child{border-left:1px solid transparent}
+.swiperTab li.active{background-color:#57cd76;}
+
+.apartList li{
+    padding: 2vh;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+}
+
+.apartList li img{
+    width: 40%;
+    height: 40%;
+    margin-right: 1rem;
+}
+
+.apartList .dateil{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: .8rem;
+    color: #7f8288;
+    width: 60%;
+}
+
+.apartList .dateil p:first-child{
+    font-size: 1rem;
+    font-weight: bold;
+    color: black;
+}
+
+.apartList .dateil p:last-child{
+    text-align: right;
+}
+
+.apartList .dateil p:last-child span{
+    color: #C78F09;
+    font-size: 1rem;
+}
+
+.apaimgs{
+    height: 30vh;
+    width: 100%;
+    background: #57FA76;
+    overflow: hidden;
+    position: relative;
+}
+
+.apaimgs .back{
+    height: 3rem;
+    width: 3rem;
+    position: absolute;
+    background: white;
+    opacity: .5;
+    border-radius: 3rem;
+    top: 1rem;
+    left: 1rem;
+}
+
+.apatitle{
+    height: 15vh;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: white;
+}
+
+.apatitle p{
+    color: #7f8288;
+}
+
+.apatitle p:first-child{
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: black;
+}
+
+.apatags{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.apatags li{
+    font-size: .8rem;
+    padding: .3rem .3rem;
+    background: #f4f3df;
+    margin-right: .5rem;
+    border-radius: .3rem;
+    color: #C78F09;
+}
+
+.apadateil{
+    margin-top: 1rem;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 1rem;
+    background: white;
+}
+
+.apadateil h4{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: .8rem;
+}
+
+.apadateil p{
+    line-height: 1.4rem;
+}
+
+.apadateil .text{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.apadateil .more{
+    color: #C78F09;
+    margin-top: .5rem;
+}
+
+.apadateil span{
+    color: #7f8288;
+}
+
+.comfirm{
+    text-align: center;
+    font-size: .8rem;
+}
+
+.comfirm .call{
+    width: 20vw;
+}
+
+.comfirm .price{
+    width: 50vw;
+    background: #57cd76;
+    line-height: 8vh;
+}
+
+.comfirm .price span{
+    font-size: 1.2rem;
+}
+
+.comfirm .now{
+    width: 30vw;
+    background: #ff5b53;
+    line-height: 8vh;
+}
+
+.comfirm .call a{
+    color: black;
+}
+
+.comfirm a{
+    color: white;
+}
+
+.day{
+    display: flex;
+    padding: 1rem;
+    justify-content: space-between;
+    line-height: 2rem;
+}
+
+.day button,.day input{
+    width: 2rem;
+    height: 2rem;
+    background: none;
+    border: 1px solid #ddd;
+    text-align: center;
+    border-radius: .3rem;
+}
+
+.time{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px #bbb solid;
+}
+
+.time li{
+    width: 5rem;
+    text-align: center;
+    height: 3rem;
+    border: 1px solid #ddd;
+    line-height: 3rem;
+    border-radius: .5rem;
+}
+
+.tip{
+    color: #7f8288;
+}

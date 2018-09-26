@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>康养旅居宝</title>
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/public.css">
+    <link rel="stylesheet" href="./style/index.css">
+    <link rel="stylesheet" href="./style/swiper.min.css">
+</head>
+<body>
+    <div class="main">
+        <div class="banner">
+
+        </div>
+        <ul class="mibtn">
+            <li><a href=""><span></span> 新手专区</a></li>
+            <li><a href=""><span></span>邀请好友</a></li>
+            <li><a href=""><span></span>旅居预定</a></li>
+        </ul>
+        <div class="order">
+            <div class="title">
+                提前90天预定<span>详情></span>
+            </div>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="vipcard swiper-slide">
+                        <div class="card_title">
+                            鑫农源共享养老公寓会员卡
+                            <span>奖励积分+2%</span>
+                        </div>
+                        <div class="card_card">
+                            <img src="./img/vip_card.png" alt="">
+                            <ul>
+                                <li>会员价<span>138</span>元/ <small>间夜</small></li>
+                                <li>限量0份/ <span>1</span>晚起订 </li>
+                                <li>不可提前入住</li>
+                            </ul>
+                        </div>
+                        <div class="card_button">
+                            马上预定<br>
+                            <span>剩余0份</span> 
+                        </div>
+                    </div>
+                    <div class="swiper-slide">Slide 2</div>
+                    <div class="swiper-slide">Slide 3</div>
+                    <div class="swiper-slide">Slide 4</div>
+                    <div class="swiper-slide">Slide 5</div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <ul class="gudie">
+            <li><a href="" >
+                <i class="left"></i>
+                <div class="right">
+                    安全保障<br>
+                    <span>为资金保价护航</span>
+                </div>
+            </a></li>
+            <li><a href="" >
+                <i class="left"></i>
+                <div class="right">
+                    新手指引<br>
+                    <span>贴心为您服务</span>
+                </div>
+            </a></li>
+        </ul>
+    </div>
+    <ul class="buttom">
+        <li><a href="">首页</a></li>
+        <li><a href="">公寓预定</a></li>
+        <li><a href="">积分商城</a></li>
+        <li><a href="">我的</a></li>
+    </ul>
+</body>
+<script src="./js/swiper.min.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: {
+            el: '.swiper-pagination',
+        },
+    });
+</script>
+</html>
