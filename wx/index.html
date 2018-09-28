@@ -8,17 +8,22 @@
     <link rel="stylesheet" href="./style/reset.css">
     <link rel="stylesheet" href="./style/public.css">
     <link rel="stylesheet" href="./style/index.css">
+    <link rel="stylesheet" href="./iconfont/iconfont.css">
     <link rel="stylesheet" href="./style/swiper.min.css">
 </head>
 <body>
     <div class="main">
-        <div class="banner">
-
+        <div class="banner swiper-container">
+            <div class="swiper-wrapper">
+                <img class="swiper-slide" src="./img/banner1.jpg" alt="">
+                <img class="swiper-slide" src="./img/banner2.jpg" alt="">
+            </div>
+            <div class="swiper-pagination"></div>
         </div>
         <ul class="mibtn">
-            <li><a href=""><span></span> 新手专区</a></li>
-            <li><a href=""><span></span>邀请好友</a></li>
-            <li><a href=""><span></span>旅居预定</a></li>
+            <li><a href=""><span><i class="iconfont icon-redpacket"></i></span> 新手专区</a></li>
+            <li><a href=""><span><i class="iconfont icon-invite"></i></span>邀请好友</a></li>
+            <li><a href=""><span><i class="iconfont icon-trip"></i></span>旅居预定</a></li>
         </ul>
         <div class="order">
             <div class="title">
@@ -55,14 +60,15 @@
         </div>
         <ul class="gudie">
             <li><a href="" >
-                <i class="left"></i>
+                <i class="left iconfont icon-ai-safe">
+                </i>
                 <div class="right">
                     安全保障<br>
                     <span>为资金保价护航</span>
                 </div>
             </a></li>
             <li><a href="" >
-                <i class="left"></i>
+                <i class="left iconfont icon-guide"></i>
                 <div class="right">
                     新手指引<br>
                     <span>贴心为您服务</span>
@@ -71,10 +77,10 @@
         </ul>
     </div>
     <ul class="buttom">
-        <li><a href="">首页</a></li>
-        <li><a href="">公寓预定</a></li>
-        <li><a href="">积分商城</a></li>
-        <li><a href="">我的</a></li>
+        <li><a href=""><i class="iconfont icon-home"></i><br> 首页</a></li>
+        <li><a href=""><i class="iconfont icon-addhouse"></i><br>公寓预定</a></li>
+        <li><a href=""><i class="iconfont icon-points"></i><br>积分商城</a></li>
+        <li><a href=""><i class="iconfont icon-account"></i><br>我的</a></li>
     </ul>
 </body>
 <script src="./js/swiper.min.js"></script>
@@ -82,6 +88,11 @@
     var swiper = new Swiper('.swiper-container', {
         pagination: {
             el: '.swiper-pagination',
+        },
+    });
+    var banner = new Swiper('.banner', {
+        pagination: {
+            el: '.banner-pagination',
         },
     });
 </script>

@@ -17,8 +17,52 @@
     display: flex;
     align-items: center;
     z-index: 999;
+    font-size: .8rem;
+}
+
+.buttom i{
+    font-size: 1.2rem;
+    line-height: 1.5rem;
 }
 
 .vipcard{
     background: url('../img/cardbg.jpg') no-repeat left top 100% !important;
+}
+
+
+.dateil{
+    margin-top: 1rem;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 1rem;
+    background: white;
+}
+
+.dateil h4{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: .8rem;
+}
+
+.dateil p{
+    line-height: 1.4rem;
+}
+
+
+
+.dateil .more{
+    color: #C78F09;
+    margin-top: .5rem;
+}
+
+.dateil span{
+    color: #7f8288;
+}
+
+.box{
+    border-radius: 5px;
+    box-shadow: 0 2px 5px 1px rgba(0, 0, 0, .1);
+    margin: 2vh;
+    padding: 1rem;
+    position: relative;
 }

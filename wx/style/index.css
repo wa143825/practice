@@ -24,6 +24,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    font-size: .8rem;
 }
 
 .mibtn span{
@@ -32,6 +33,13 @@
     width: 5.5vh;
     background: #419156;
     border-radius: 5.5vh;
+    text-align: center;
+}
+
+.mibtn i{
+    color: white;
+    font-size: 1.5rem;
+    line-height: 5.5vh
 }
 
 .order{
@@ -87,8 +95,6 @@
     font-size: .9rem;
 }
 
-
-
 .card_title span{
     color: #C78F09;
 }
@@ -141,8 +147,20 @@
     border-top: 1px solid #ddd;
 }
 
+.gudie li a{
+    display: flex;
+    align-items: center;
+}
+
+.gudie .left{
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    color: #419156
+}
+
 .gudie .right{
     text-align: center;
+    float: right;
 }
 
 .gudie .right span{
