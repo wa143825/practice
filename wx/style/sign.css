@@ -47,6 +47,13 @@ body{
     border: none;
 }
 
+.setting .getcode{
+    border: 1px solid #57cc75;
+    background: white;
+    border-radius: .3rem;
+    float: right;
+}
+
 .loginbtn{
     margin: 1rem 0;
     position: relative;
@@ -54,7 +61,7 @@ body{
 
 .logbtn,.signbtn{
     width: 6rem;
-    background: #57cc75;
+    background: #bbb;
     height: 2rem;
     text-align: center;
     line-height: 2rem;
@@ -69,9 +76,12 @@ body{
 
 .signbtn{
     float: right;
-    background: #aaa;
     border-top-left-radius: 1rem;
     border-bottom-left-radius: 1rem;
+}
+
+.mainbtn{
+    background: #57cc75;
 }
 
 .protocol{
@@ -100,3 +110,44 @@ body{
     margin: 0 auto;
     display: block;
 }
+
+
+.verifybox{
+    padding-top: 1rem;
+}
+
+
+.fake-box{
+    width: 73vw;
+    border:1px solid #bfb6b6;
+    margin: 0 auto;
+    font-size: 0;
+}
+
+.fake-box input{
+    padding: 0;
+    width: 12vw;
+    height: 12vw;
+    border-right: 1px solid #e5e5e5;
+    text-align: center;
+    font-size: 1rem;
+    margin:0 !important;
+}
+.fake-box input:nth-last-child(1){
+    border:none;
+}
+
+.pwd-box input[type="tel"]{  
+    width: 72vw;  
+    height: 12vw;  
+    color: transparent;  
+    position: absolute;  
+    top: 1rem;  
+    left: 50%;
+    transform: translate(-50%);  
+    border: none;  
+    font-size: 0.25rem;  
+    opacity: 0;  
+    z-index: 1;  
+    letter-spacing: 0.636rem;  
+}  

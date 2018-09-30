@@ -47,11 +47,14 @@
                     <div class="select">
                         <i class="iconfont icon-confirm"></i>
                     </div>
-                    <div>
+                    <div style="width:100%;">
                         <p>是否可提前使用</p>
+                        <div class="ios-checkbox">
+                            <input type="checkbox" onchange="change()" id="ios-checkbox" checked='1'  name="emulate-ios-button" class="raw-checkbox">
+                            <label for="ios-checkbox" class="emulate-ios-button"></label>
+                        </div>
                         <p class="tip">按时入住有更多奖励积分哦</p> 
                     </div>
-                    
                 </li>
                 <li>
                     <div class="select">
@@ -70,4 +73,10 @@
 <script src="./js/jquery-3.2.1.min.js"></script>
 <script src="./js/swiper.min.js"></script>
 <script src="./js/swiperTab.js"></script>
+<script>
+let ioscheckbox = document.querySelector('#ios-checkbox').checked
+function change(){
+    ioscheckbox = ioscheckbox ? false : true;
+}
+</script>
 </html>

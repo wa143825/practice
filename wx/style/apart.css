@@ -192,7 +192,6 @@
     border-bottom: 1px solid #ddd;
     padding: .5rem 0;
     display: flex;
-
 }
 
 .selects li i{
@@ -235,4 +234,95 @@
 
 .orderconfirm a{
     color: white;
+}
+
+
+
+
+
+.ios-checkbox{
+    float: right;
+    width: 2rem;
+    display:-webkit-box;
+    display:-webkit-flex;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-orient:horizontal;
+    -webkit-box-direction:normal;
+    -webkit-flex-direction:column;
+        -ms-flex-direction:column;
+            flex-direction:column;
+    -webkit-flex-wrap:nowrap;
+        -ms-flex-wrap:nowrap;
+            flex-wrap:nowrap;
+    -webkit-justify-content:space-around;
+        -ms-flex-pack:distribute;
+            justify-content:space-around;
+    -webkit-box-align:center;
+    -webkit-align-items:center;
+        -ms-flex-align:center;
+            align-items:center;
+}
+
+.emulate-ios-button {
+    display: block;
+    width: 2rem;
+    height: 1rem;
+    background: #ccc;
+    border-radius: 5rem;
+    cursor: pointer;
+    position: relative;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+
+.emulate-ios-button:after {
+    content: '';
+    display: block;
+    width: .9rem;
+    height: .9rem;
+    border-radius: 100%;
+    background: #fff;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+    position: absolute;
+    left: .05rem;
+    top: .05rem;
+    -webkit-transform:translateZ(0);    
+    transform:translateZ(0);
+    -webkit-transition: all .3s ease;  
+    transition: all .3s ease;
+}
+
+.emulate-ios-button:active:after {
+    width: 1.1rem;
+}
+
+.raw-checkbox{
+    height:2rem;
+    width:2rem;
+    display: none;
+}
+
+.raw-checkbox:checked+label {
+    background: #34bf49;
+}
+
+/* 这里是伪元素偏移,初始是0.9+0.05 ,所以这里1.05rem */
+.raw-checkbox:checked+label:after {
+    left: 1.05rem;
+}
+
+.raw-checkbox:checked+label:active:after {
+    left: .5rem;
+}
+
+
+.raw-checkbox:disabled+label {
+    background: #d5d5d5;
+    pointer-events: none;
+}
+
+.raw-checkbox:disabled+label:after {
+    background: #bcbdbc;
 }

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>康养旅居宝</title>
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/public.css">
+    <link rel="stylesheet" href="./style/sign.css">
+    <link rel="stylesheet" href="./iconfont/iconfont.css">
+</head>
+<body>
+    <div class="signtitle">
+        <h3>请输入验证码</h3>
+    </div>
+
+    <div class="box setting verifybox">
+            <div class="pwd-box">  
+                <input type="tel" maxlength="6" class="pwd-input" id="pwd-input">  
+                <div class="fake-box">  
+                    <input type="text" readonly="">  
+                    <input type="text" readonly="">  
+                    <input type="text" readonly="">  
+                    <input type="text" readonly="">  
+                    <input type="text" readonly="">  
+                    <input type="text" readonly="">  
+                </div>  
+            </div>  
+        <p class="forget"><a href="">验证码已发送</a></p>
+        <button class="signbutton loginout">确定</button>
+    </div>
+</body>
+<script src="./js/jquery-3.2.1.min.js"></script>
+<script>
+    var $input = $(".fake-box input");  
+    $("#pwd-input").on("input", function() {  
+        var pwd = $(this).val().trim();  
+        for (var i = 0, len = pwd.length; i < len; i++) {  
+            $input.eq("" + i + "").val(pwd[i]);  
+        }  
+        $input.each(function() {  
+            var index = $(this).index();  
+            if (index >= len) {  
+                $(this).val("");  
+            }  
+        });  
+        
+    });  
+    $('.signbutton').click(function(){
+        alert($("#pwd-input").val())
+    })
+
+
+</script>
+</html>
