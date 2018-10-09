@@ -7,11 +7,45 @@
     background: white;
     border-bottom: 1px solid #ddd;
     padding: 1rem;
+}
+
+.myavatar .my1{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+.myavatar .my2{
+    margin: 1rem;
+    text-align: center;
+}
+
+.myavatar .my3{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.myavatar .my2 span{
+    font-size: 1.8rem;
+    color:#c78f09;
+    line-height: 2.5rem;
+}
+
+.myavatar .my3 span{
+    color:#c78f09;
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+
+.myavatar .my3::after{
+    content: '';
+    height: 3rem;
+    width: 1px;
+    background: black;
+    position: absolute;
+}
 
 .avatar {
     height: 4rem;
@@ -27,35 +61,80 @@
 }
 
 .myavatar .name{
-    height: 4rem;
+    height: 3rem;
     float: left;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    margin-top: .5rem;
 }
 
 .myavatar i{
     font-size: 2.5rem;
 }
 
-.freelogin{
+.cashout{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: 1rem;
 }
 
-.freelogin i{
-    font-size: 2rem;
-    transform: rotate(-90deg)
-}
-
-.myorder {
-    padding-bottom: 1rem;
-    margin-bottom: 1rem;
-    border-bottom: 1px solid #ddd;
+.dateil input[type='button']{
+    border: none;
+    padding: .7rem 2rem;
+    border-radius: .3rem;
+    background: linear-gradient(to right, #feb96c, #fe997f);
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: .2rem;
 }
 
 .orderdateil{
+    padding: 0;
+}
+
+.myorder {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #ddd;
+    background: url('../img/cardbg.jpg') no-repeat;
+    background-size: 10rem;
+}
+
+.myorder .order-title .left{
+    font-weight: bolder;
+}
+
+.myorder .order-card{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #c78f09;    
+    margin: 1rem 0;
+}
+
+.myorder .order-card img{
+    width: 40%;
+    height: 40%;
+}
+
+.myorder .order-detail{
+    font-size: .8rem;
+    text-align: center;
+}
+
+.myorder .order-detail span{
+    color: #c78f09;
+}
+
+.myorder input[type='button']{
+    width: 100%;
+    margin-top: 1rem;
+}
+
+/* .orderdateil{
     display: flex;
     justify-content: space-between;
     font-size: .7rem;
@@ -97,7 +176,7 @@
 
 .myprice .left{
     width: 50%;
-}
+} 
 
 .increase ul{
     display: flex;
@@ -118,7 +197,7 @@
     width: 2rem;
     background: #c78f09;
     margin: 0 auto;
-}
+}*/
 
 .setting li{
     padding: 1rem 0;

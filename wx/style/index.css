@@ -93,14 +93,18 @@
     -ms-flex-align: center;
     -webkit-align-items: center;
     align-items: center;
+    background: white;
 }
 
 .vipcard{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    padding-bottom: 3vh;
+    padding: 2vh 0 4vh 0;
     font-size: .9rem;
+    background: url('../img/cardbg.jpg') no-repeat white;
+    background-size: auto 100%;
+    
 }
 
 .card_title span{
@@ -118,21 +122,22 @@
     height: 40%;
 }
 
-.card_title ul li{
-    float: left;
-    text-align: left;
-    line-height: 1.5rem;
-    font-size: .6rem;
-}
-
-.card_title ul li span{
-    font-size: 1rem;
-    color: #C78F09;
-}
-
 .card_card li{
     float: left;
     margin-right: 1rem;
+}
+
+.card_card li .iconbox{
+    height: 2rem;
+    width: 2rem;
+    border-radius: 1rem;
+    background: #C78F09;
+    margin: .5rem auto;
+}
+
+.card_detial p{
+    font-size: .8rem;
+    line-height: 1.6rem;
 }
 
 .card_button{
