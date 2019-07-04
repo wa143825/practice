@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    
+    <link rel="stylesheet" href="./css/public.css">
+    <link rel="stylesheet" href="./css/index1.css">
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+</head>
+<body>
+<div id="particles-js"></div>
+<div id="main-box">
+    <div class="title-box">
+        <div class="logo">
+            <img src="./images/logo.png" alt="" srcset="">
+        </div>
+        <div class="title">
+            <div class="title-ch">宜昌城市云监控平台</div>
+            <div class="title-en">Yichang City Cloud Monitoring Platform</div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="left">
+            <div class="box box1">
+                <div class="title">
+                    服务器参数
+                </div>
+                <div class="content">
+                    <div class="data" id="serverdata"></div>
+                </div>
+            </div>
+            <div class="box box2">
+                <div class="title">
+                    监控报警
+                </div>
+                <div class="content">
+                    <div id="monitoring">
+                        <ul>
+                            <li>
+                                <div class="time">2019-05-21<br /> 17:50:37</div>
+                                <div class="point"></div>
+                                <div class="ip">128.182.154.425</div>
+                                <div class="tip">问题</div>
+                                <div class="desc">1111111111111111</div>
+                                <div class="status">已解决</div>
+                            </li>
+                            <li>
+                                <div class="time">2019-05-21<br />  17:50:37</div>
+                                <div class="point"></div>
+                                <div class="ip">12.18.14.42</div>
+                                <div class="tip">问题</div>
+                                <div class="desc">111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111</div>
+                                <div class="status">已解决</div>
+                            </li>
+                            <li>
+                                <div class="time">2019-05-21<br />  17:50:37</div>
+                                <div class="point"></div>
+                                <div class="ip">12.18.14.42</div>
+                                <div class="tip">问题</div>
+                                <div class="desc">111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111</div>
+                                <div class="status">已解决</div>
+                            </li>
+                            <li>
+                                <div class="time">2019-05-21<br />  17:50:37</div>
+                                <div class="point"></div>
+                                <div class="ip">12.18.14.42</div>
+                                <div class="tip">问题</div>
+                                <div class="desc">111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111</div>
+                                <div class="status">已解决</div>
+                            </li>
+                            <li>
+                                <div class="time">2019-05-21<br />  17:50:37</div>
+                                <div class="point"></div>
+                                <div class="ip">12.18.14.42</div>
+                                <div class="tip">问题</div>
+                                <div class="desc">111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111</div>
+                                <div class="status">已解决</div>
+                            </li>
+                            <li>
+                                <div class="time">2019-05-21<br />  17:50:37</div>
+                                <div class="point"></div>
+                                <div class="ip">12.18.14.42</div>
+                                <div class="tip">问题</div>
+                                <div class="desc">111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111</div>
+                                <div class="status">已解决</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="middle">
+            <div class="map data">
+                <div id="mapChart"></div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="box box3">
+                <div class="title">
+                    网络统计
+                </div>
+                <div class="content">
+                    <div class="data" id="internet"></div>
+                </div>
+            </div>
+            <div class="box box4">
+                <div class="title">
+                    中间月统计
+                </div>
+                <div class="content">
+                    <div class="data" id="middlemonth"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="jquery/jquery.min.js"></script>
+<script src="js/echarts.js"></script>
+<script src="js/index1.js"></script>
+<script src="js/particles.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

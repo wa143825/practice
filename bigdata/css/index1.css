@@ -1,0 +1,126 @@
+.left{
+    height: 85vh;
+    width: 28%;
+}
+.middle{
+    height: 85vh;
+    width: 40%;
+    margin: 0 3%;
+}
+.right{
+    height: 85vh;
+    width: 26%;
+}
+
+
+.box2,
+.box4{margin-top: 3vh}
+
+.box1 .content{
+    height: 38vh;
+}
+
+.box2 .content{
+    height: 35vh;
+}
+
+.box3 .content{
+    padding-top: 3vh; 
+    height: 35vh;
+}
+
+.box4 .content{
+    height: 35vh;
+}
+
+
+.map{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95%;
+    background: url('../images/map_lefttop.png') 0 25px no-repeat,
+                url('../images/map_righttop.png') 90% 25px no-repeat;
+}
+#mapChart{
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    height: 94%;
+    width: 95%;
+}
+
+.map::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    border: 1px solid #113fdb;
+    border-top: none;
+}
+
+#monitoring{
+    height: 82%;
+    color: #fff;
+    padding: 30px;
+    overflow-y: scroll;
+    font-size: 14px;
+}
+#monitoring ul{
+    width: 100%;
+}
+#monitoring ul li{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#monitoring li .time{
+    width: 20%;
+}
+#monitoring li .point{
+    width: 10px;
+    position: relative;
+    height: 10px;
+    border-radius: 5px;
+    background: #fff;
+    margin: 0 15px;
+    margin-top: 8px;
+}
+#monitoring li:not(:last-child) .point::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 4px;
+    height: 60px;
+    width: 2px;
+    background: #fff
+}
+
+#monitoring li .ip{
+    width: 120px;
+}
+#monitoring li .tip{
+    color: red;
+    width: 50px;
+}
+#monitoring li .desc{
+    width: 20%;
+    height: 50px;
+    color: red;
+    font-size: 12px;
+    word-break:break-all;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    margin-right: 10px;
+}
+#monitoring li .status{
+    color: #129d18;
+    margin-left: auto;
+}
+

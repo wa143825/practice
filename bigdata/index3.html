@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+   
+    <link rel="stylesheet" href="./css/public.css">
+    <link rel="stylesheet" href="./css/index3.css">
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+</head>
+<body>
+<div id="particles-js"></div>
+<div id="main-box">
+    <div class="title-box">
+        <div class="logo">
+            <img src="./images/logo.png" alt="" srcset="">
+        </div>
+        <div class="title">
+            <div class="title-ch">宜昌城市云监控平台</div>
+            <div class="title-en">Yichang City Cloud Monitoring Platform</div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="left">
+            <div class="box box1">
+                <div class="title">
+                    主机列表
+                </div>
+                <div class="content">
+                    <div class="data" id="serverdata">
+                        <details class="menu" open>
+                            <summary>cloud-linux（3）</summary>
+                            <ul>
+                                <li>10.12.18.51</li>
+                                <li>10.12.18.51</li>
+                                <li>10.12.18.51</li>
+                            </ul>
+                        </details>
+                        <details class="menu" open>
+                            <summary>cloud-linux（3）</summary>
+                            <ul>
+                                <li>10.12.18.51</li>
+                                <li>10.12.18.51</li>
+                                <li>10.12.18.51</li>
+                            </ul>
+                        </details>
+                        <details class="menu" open>
+                            <summary>cloud-linux（3）</summary>
+                            <ul>
+                                <li>10.12.18.51</li>
+                                <li>10.12.18.51</li>
+                                <li>10.12.18.51</li>
+                            </ul>
+                        </details>
+                        <details class="menu" open>
+                            <summary>cloud-linux（3）</summary>
+                            <ul>
+                                <li>10.12.18.51</li>
+                                <li>10.12.18.51</li>
+                                <li>10.12.18.51</li>
+                            </ul>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="middle">
+            <div id="pieChart"></div>
+            <img id="middlebg" src="./images/middlebg.png" alt="" srcset="">
+        </div>
+        <div class="right">
+            <div class="box box2">
+                <div class="title">
+                    CPU详细参数
+                </div>
+                <div class="content">
+                    <div class="status-box">
+                        <span class="serial">1</span>
+                        <div class="status-title">
+                            <span>CPU</span>
+                            <span>空闲时间</span>
+                        </div>
+                        <span class="status-box-content">
+                            <span id="progressBar1" class="h-100P bar"></span>
+                        </span>
+                        <span class="schedule schedule1"></span>
+                    </div>
+                    <div class="status-box">
+                        <span class="serial">2</span>
+                        <div class="status-title">
+                            <span>CPU</span>
+                            <span>运行时间</span>
+                        </div>
+                        <span class="status-box-content">
+                            <span id="progressBar2" class="h-100P bar"></span>
+                        </span>
+                        <span class="schedule schedule2"></span>
+                    </div>
+                    <div class="status-box">
+                        <span class="serial">3</span>
+                        <div class="status-title">
+                            <span>CPU</span>
+                            <span>用户时间</span>
+                        </div>
+                        <span class="status-box-content">
+                            <span id="progressBar3" class="h-100P bar"></span>
+                        </span>
+                        <span class="schedule schedule3"></span>
+                    </div>
+                    <div class="status-box">
+                        <span class="serial">4</span>
+                        <div class="status-title">
+                            <span>CPU</span>
+                            <span>中断时间</span>
+                        </div>
+                        <span class="status-box-content">
+                            <span id="progressBar4" class="h-100P bar"></span>
+                        </span>
+                        <span class="schedule schedule4"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="box box3">
+                <div class="title">
+                    资源池(容量)
+                </div>
+                <div class="content">
+                    <div id="resourceChart"></div>
+                    <div class="resource-des">
+                        <span class="resource-des-1">C:/</span>
+                        <span class="resource-des-2">D:/</span>
+                        <span class="resource-des-3">E:/</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 数字做了动效，需要更改刷新数值时在index2.js里控制 -->
+            <div class="box box4">
+                <div class="content">
+                    <div class="data" id="flow">
+                        <div class="number">
+                            流量流入： <span class="flowjoin">280</span>MB/S
+                        </div>
+                        <div class="number">
+                            流量流入： <span class="flowout">280</span>MB/S
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="jquery/jquery.min.js"></script>
+<script src="js/echarts.js"></script>
+<script src="js/particles.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/TweenLite.min.js"></script>
+<script src="js/lem_counter.js"></script>
+<script src="js/index3.js"></script>
+</body>
+</html>

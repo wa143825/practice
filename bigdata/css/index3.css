@@ -1,0 +1,287 @@
+.left{
+    height: 85vh;
+    width: 24%;
+}
+.middle{
+    height: 80vh;
+    width: 48%;
+    margin: 0 3%;
+    position: relative;
+}
+.right{
+    height: 85vh;
+    width: 28%;
+}
+
+.box3{
+    margin-top: 3vh
+}
+
+.box1 .content{
+    height: 78vh;
+}
+
+.box2 .content{
+    height: 28vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 30px 0 10px 0;
+}
+
+.box3 .content{
+    height: 25vh;
+}
+
+.box4 .content{
+    height: 13vh;
+}
+
+
+
+/* 主机列表 */
+
+#serverdata{
+    color: #fff;
+    box-sizing: border-box;
+    padding: 25px;
+    overflow-y: scroll;
+}
+
+.menu summary {
+    height: 40px;
+    line-height: 40px;
+    text-indent: 10px;
+    outline: none;
+    font-size: 22px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.menu summary::-webkit-details-marker {
+    display: none;
+}
+
+/*可用图片或字符,如果使用图片，请把content的值设置成空字符*/
+
+.menu summary:before {
+    content: "+";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    font-size:22px;
+    font-weight:700;
+}
+
+.menu[open] summary:before {
+    content: "-";
+}
+
+
+.menu ul li {
+    list-style: none;
+    text-indent: 40px;
+    font-size: 18px;
+    height: 40px;
+    line-height: 30px;
+    color: #5fd8fb;
+}
+
+
+
+/* CPU详细参数 */
+.status-box{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+    background: rgba(3, 94, 255, .1);
+    padding: 0 20px;
+    box-sizing: border-box;
+    border-top: 1px solid #071a4b;
+    border-bottom: 1px solid #071a4b
+}
+
+.serial{
+    display: block;
+    width: 50px;
+    float: left;
+    line-height: 70px;
+    color: #ffffff;
+    font-size: 18px;
+}
+.status-title{
+    display: block;
+    width: 70px;
+    float: left;
+    color: #ffffff;
+    text-align: center;
+}
+.status-title span{
+    display: block;
+    width: 100%;
+}
+.status-title span:last-child{
+    background-color: #0966b8;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+
+.status-box-content{
+    width: 250px;
+    height: 20px;
+    background-color: #162862;
+    position: relative;
+    float: left;
+    margin-left: 40px;
+}
+
+.schedule{
+    margin-left: auto;
+    color: #04f3f6;
+}
+
+
+.bar{
+    display: inline-block;
+    background-image: linear-gradient(to right, #ff9569 0%, #e92758 100%);
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    text-align: right;
+    left: 0;
+}
+
+.h-100P{
+    height: 100%;
+}
+
+
+
+
+
+
+/* 资源池 */
+.resourceChart-box{
+    width: 100%;
+    height: 230px;
+}
+#resourceChart{
+    width: 100%;
+    height: 75%;
+    margin-top: 25px;
+}
+.resource-des{
+    width: 510px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+}
+.resource-des span {
+    display: block;
+    width: 33%;
+    color: #00bebd;
+    font-size: 19px;
+    text-align: center;
+}
+
+/* 流量 */
+
+#flow{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#flow .number{
+    color: #fff;
+    box-sizing: border-box;
+    background: url('../images/border.png') no-repeat;
+    background-size: 100% 100%;
+    height: 75px;
+    width: 210px;
+    padding: 3px;
+    line-height: 75px;
+    text-align: center;
+}
+
+.flowjoin, .flowout{
+    color: #e92758;
+}
+
+
+#middlebg{
+    position: absolute;
+    width: 120%;
+    bottom: 0;
+    left: -80px;
+}
+#pieChart{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 99;
+}
+
+.detail{
+    position: absolute;
+    color: #01b3b4;
+    border: 1px solid #0966b8;
+    padding: 10px;
+}
+.detail .title{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.detail ul{
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.detail1{
+    top: 12%;
+
+}
+.detail1::after{
+    content: '';
+    position: absolute;
+    top: 40%;
+    left: 100%;
+    height: 1px;
+    width: 120px;
+    border-bottom: 1px solid #0966b8;
+}
+
+.detail2{
+    right: 0;
+    top: 18%;
+}
+
+.detail2::after{
+    content: '';
+    position: absolute;
+    top: 100%;
+    right: 50%;
+    height: 30px;
+    width: 120px;
+    border-right: 1px solid #0966b8;
+    border-bottom: 1px solid #0966b8;
+}
+
+.detail3 {
+    bottom: 5%;
+}
+
+.detail3::after{
+    content: '';
+    position: absolute;
+    bottom: 50%;
+    left: 100%;
+    height: 13vh;
+    width: 120px;
+    border-right: 1px solid #0966b8;
+    border-bottom: 1px solid #0966b8;
+}
